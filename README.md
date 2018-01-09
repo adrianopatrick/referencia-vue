@@ -21,3 +21,6 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+
+## Authors
+Adriano Patrick do Nascimento Cunha - DATAPREVCE - patrick.cunha@dataprev.gov.br
