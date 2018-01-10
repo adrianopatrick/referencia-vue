@@ -4,6 +4,7 @@
         <application-bar />
         <user-info />
         <info-bar-btn />
+        <slot />
     </header>
 </template>
 

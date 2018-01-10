@@ -4,6 +4,7 @@ import router from './router'
 
 import('./assets/css/fonts.css')
 import('./assets/css/inss.css')
+import('./assets/css/gitlab.css')
 
 Vue.config.productionTip = false
 
