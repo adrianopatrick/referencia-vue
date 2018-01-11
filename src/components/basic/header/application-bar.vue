@@ -3,9 +3,7 @@
       <div class="app-id">
           <h1 class="title-app">
               <a href="/">
-                <strong>Showcase</strong>
-                &nbsp;
-                VueJS
+                <strong>Showcase</strong> VueJS
               </a>
           </h1>
           <h2 class="title-owner">
