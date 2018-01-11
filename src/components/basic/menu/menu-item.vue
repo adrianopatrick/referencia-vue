@@ -1,12 +1,12 @@
 <template>
-  <li role="menuitem" class="active">
+  <li role="menuitem" :class="{ active : isActive }" @click="action()">
       <a>{{ label }}</a>
   </li>
 </template>
 
 <script>
 export default {
-  props: ['label']
+  props: ['label', 'isActive', 'action']
 }
 </script>
 
