@@ -22,5 +22,8 @@ npm run build
 npm run build --report
 ```
 
+## Layout da Tela Inicial
+![alt text](https://www-scm.prevnet/patrick.cunha/referencia-vue/raw/90d19bb291f66f8e830b5ccf9151881c491285e4/telaInicial.png)
+
 ## Authors
 Adriano Patrick do Nascimento Cunha - DATAPREVCE - patrick.cunha@dataprev.gov.br
