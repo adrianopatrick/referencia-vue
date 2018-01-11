@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import DtpContainer from '../components/dtp-container'
+import DtpContainer from '@/components/dtp-container'
 export default {
   components: {
     DtpContainer
