@@ -5,11 +5,13 @@
       <dtp-menu >
         <menu-item label="início" :is-active="isMenuItemActive(1)" :action="() => handleMenuItemClick(1)"/>
         <menu-item label="teste" :is-active="isMenuItemActive(2)" :action="() => handleMenuItemClick(2)"/>
-        <menu-dropdown label="componentes">
-          <menu-item label="Inputs" />
+        <menu-dropdown label="componentes" :is-active="isDropdownMenuItemActive(3)" :action="() => handleMenuItemClick(3)">
+          <menu-item label="Inputs" :is-active="isMenuItemActive(3.1)" :action="() => handleMenuItemClick(3.1)"/>
         </menu-dropdown>
-        <menu-dropdown label="Exemplos Funcionais">
-          <menu-item label="CRUD" />
+        <menu-dropdown label="Exemplos Funcionais" :is-active="isDropdownMenuItemActive(4)" :action="() => handleMenuItemClick(4)">
+          <menu-item label="Feature1" :is-active="isMenuItemActive(4.1)" :action="() => handleMenuItemClick(4.1)"/>
+          <menu-item label="Feature2" :is-active="isMenuItemActive(4.2)" :action="() => handleMenuItemClick(4.2)"/>
+          <menu-item label="Feature3" :is-active="isMenuItemActive(4.3)" :action="() => handleMenuItemClick(4.3)"/>
         </menu-dropdown>
       </dtp-menu>
     </dtp-header>
@@ -34,18 +36,18 @@ export default {
     }
   },
   methods: {
-    isMenuItemActive: function (key) {
-      return key && this.activeMenuKey && this.activeMenuKey === key
-    },
     handleMenuItemClick: function (key) {
       this.activeMenuKey = key
+    },
+    isMenuItemActive: function (key) {
+      return key && this.activeMenuKey && this.activeMenuKey === key
     },
     isDropdownMenuItemActive: function (key) {
       return (
         key &&
-        this.state.activeMenuKey &&
-        this.state.activeMenuKey >= key &&
-        this.state.activeMenuKey < key + 1
+        this.activeMenuKey &&
+        this.activeMenuKey >= key &&
+        this.activeMenuKey < key + 1
       )
     }
   },
