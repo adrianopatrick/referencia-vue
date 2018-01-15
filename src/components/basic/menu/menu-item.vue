@@ -1,12 +1,15 @@
 <template>
   <li role="menuitem" :class="{ active : isActive}" @click="action()">
-      <a>{{ label }}</a>
+      <a @click="navigate(rota)">{{ label }}</a>
   </li>
 </template>
 
 <script>
 export default {
-  props: ['label', 'isActive', 'action']
+  props: ['label', 'isActive', 'action', 'rota'],
+  methods: {
+    navigate (rota) { this.$router.push({name: rota}) }
+  }
 }
 </script>
 

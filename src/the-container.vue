@@ -3,10 +3,18 @@
     <a id="fork-on-gitlab" href="https://www-scm.prevnet/patrick.cunha/referencia-vue">Fork me on GitLab</a>
     <dtp-header>
       <dtp-menu >
-        <menu-item label="início" :is-active="isMenuItemActive(1)" :action="() => handleMenuItemClick(1)"/>
-        <menu-item label="teste" :is-active="isMenuItemActive(2)" :action="() => handleMenuItemClick(2)"/>
-        <menu-dropdown label="componentes" :is-active="isDropdownMenuItemActive(3)" :action="() => handleMenuItemClick(3)">
-          <menu-item label="Inputs" :is-active="isMenuItemActive(3.1)" :action="() => handleMenuItemClick(3.1)"/>
+        <menu-item label="Início" 
+          rota="home.index"
+          :is-active="isMenuItemActive(1)" 
+          :action="() => handleMenuItemClick(1)"/>
+        <menu-dropdown label="Componentes" 
+          :is-open="isMenuItemActive(3)"
+          :is-active="isDropdownMenuItemActive(3)" 
+          :action="() => handleMenuItemClick(3)">
+          <menu-item label="Inputs" 
+            rota="input.index"
+            :is-active="isMenuItemActive(3.1)" 
+            :action="() => handleMenuItemClick(3.1)"/>
         </menu-dropdown>
         <menu-dropdown label="Exemplos Funcionais" :is-active="isDropdownMenuItemActive(4)" :action="() => handleMenuItemClick(4)">
           <menu-item label="Feature1" :is-active="isMenuItemActive(4.1)" :action="() => handleMenuItemClick(4.1)"/>

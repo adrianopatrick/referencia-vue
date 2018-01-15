@@ -1,7 +1,7 @@
 <template>
     <li
         role="menuitem"
-        :class="{ open: isActive }"
+        :class="{ open: isOpen, active: isActive }"
         class='dropdown-toggle'>
         <a
             data-toggle="dropdown"
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  props: ['label', 'isActive', 'action']
+  props: ['label', 'isActive', 'isOpen', 'action']
 }
 </script>
 
