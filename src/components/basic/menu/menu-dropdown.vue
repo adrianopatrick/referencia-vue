@@ -1,6 +1,8 @@
 <template>
     <li
         role="menuitem"
+        @mouseover="isOpen = true"
+        @mouseleave="isOpen = false"
         :class="{ open: isOpen, active: isActive }"
         class='dropdown-toggle'>
         <a
@@ -8,7 +10,7 @@
             aria-haspopup="true"
             aria-expanded="false"
             role="button" 
-            @click="action()">{{ label }}</a>
+            @click.prevent="action()">{{ label }}</a>
         <ul class="dropdown-menu">
             <slot />
         </ul>
